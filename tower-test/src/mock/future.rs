@@ -28,7 +28,7 @@ impl<T> ResponseFuture<T> {
     }
 
     pub(crate) fn closed() -> ResponseFuture<T> {
-        ResponseFuture { rx: None }
+        ResponseFuture::<T> { rx: None }
     }
 }
 

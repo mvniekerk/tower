@@ -21,7 +21,7 @@ edition = "2018"
 
 [dependencies]
 futures-util = { version = "0.3", default-features = false }
-tokio = { git = "https://github.com/wasix-org/tokio.git", branch = "epoll", optional = true, features = ["sync"], default_features = false }
+tokio = { git = "https://github.com/wasix-org/tokio.git", branch = "epoll", features = ["sync"], default_features = false }
 tokio-test = "0.4"
 tower-layer = { version = "0.3", path = "../tower-layer" }
 tower-service = { version = "0.3", path = "../tower-service" }
