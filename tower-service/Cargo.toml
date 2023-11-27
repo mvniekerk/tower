@@ -24,5 +24,5 @@ edition = "2018"
 [dev-dependencies]
 http = "0.2"
 tower-layer = { version = "0.3", path = "../tower-layer" }
-tokio = { version = "1", features = ["macros", "time"] }
+tokio = { git = "https://github.com/wasix-org/tokio.git", branch = "epoll", features = ["macros", "time"], default_features = false }
 futures = "0.3"
