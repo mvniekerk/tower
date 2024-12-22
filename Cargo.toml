@@ -6,3 +6,6 @@ members = [
   "tower-service",
   "tower-test",
 ]
+
+[patch.crates-io]
+libc = { git = "https://github.com/wasix-org/libc", branch = "wasix-0.2.155" }
