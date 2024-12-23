@@ -9,7 +9,7 @@ edition = "2018"
 [dev-dependencies]
 tower = { version = "0.4", path = "../tower", features = ["full"] }
 tower-service = "0.3"
-tokio = { git = "https://github.com/wasix-org/tokio.git", branch = "epoll", features = ["full"], default_features = false }
+tokio = { git = "https://github.com/mvniekerk/tokio.git", branch = "wasix-1.42.0", features = ["full"], default_features = false }
 rand = "0.8"
 pin-project = "1.0"
 futures = "0.3.22"

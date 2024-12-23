@@ -20,10 +20,10 @@ quickcheck = "1"
 rand = "0.8"
 slab = "0.4"
 sync_wrapper = "1"
-tokio = "1.6.2"
+tokio = { git = "https://github.com/mvniekerk/tokio", branch = "wasix-1.42.0", default-features = false }
 tokio-stream = "0.1.0"
 tokio-test = "0.4"
-tokio-util = { version = "0.7.0", default-features = false }
+tokio-util = { git = "https://github.com/mvniekerk/tokio.git", branch = "wasix-1.42.0", default-features = false }
 tracing = { version = "0.1.2", default-features = false }
 tracing-subscriber = { version = "0.3", default-features = false }
 
