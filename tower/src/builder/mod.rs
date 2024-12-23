@@ -115,7 +115,7 @@ impl Default for ServiceBuilder<Identity> {
 
 impl ServiceBuilder<Identity> {
     /// Create a new [`ServiceBuilder`].
-    pub fn new() -> Self {
+    pub const fn new() -> Self {
         ServiceBuilder {
             layer: Identity::new(),
         }
@@ -325,7 +325,7 @@ impl<L> ServiceBuilder<L> {
     /// // ...but we want to call that service with a `usize`. What do we do?
     ///
     /// let usize_svc = ServiceBuilder::new()
-    ///      // Add a middlware that converts the request type to a `String`:
+    ///      // Add a middleware that converts the request type to a `String`:
     ///     .map_request(|request: usize| format!("{}", request))
     ///     // ...and wrap the string service with that middleware:
     ///     .service(string_svc);

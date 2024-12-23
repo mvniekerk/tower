@@ -51,7 +51,7 @@ where
     S: Stream,
     Q: Drive<Svc::Future>,
 {
-    pub(crate) fn new(service: Svc, stream: S, queue: Q) -> CallAll<Svc, S, Q> {
+    pub(crate) const fn new(service: Svc, stream: S, queue: Q) -> CallAll<Svc, S, Q> {
         CallAll {
             service: Some(service),
             stream,
@@ -126,7 +126,7 @@ where
             let svc = this
                 .service
                 .as_mut()
-                .expect("Using CallAll after extracing inner Service");
+                .expect("Using CallAll after extracting inner Service");
 
             if let Err(e) = ready!(svc.poll_ready(cx)) {
                 // Set eof to prevent the service from being called again after a `poll_ready` error
