@@ -8,4 +8,4 @@ members = [
 ]
 
 [patch.crates-io]
-libc = { git = "https://github.com/wasix-org/libc", branch = "wasix-0.2.155" }
+libc = { git = "https://github.com/mvniekerk/libc", branch = "wasix-0.2.169" }
